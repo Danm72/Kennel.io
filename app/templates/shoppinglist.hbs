@@ -1,0 +1,32 @@
+<h1>ShoppingList</h1>
+
+<table>
+    <tr class="col-md-9">
+        <td class="col-md-3">
+            <strong>Name:</strong>
+        </td>
+        <td class="col-md-3">
+            {{model.name}}
+        </td>
+        <td class="col-md-3">
+            <strong>Price:</strong>
+        </td>
+        <td class="col-md-3">
+            {{model.price}}
+        </td>
+    </tr>
+    <td class="col-md-9">
+        <strong>List:</strong>
+    </td>
+    {{#each item in model.items}}
+        <tr class="col-md-3">
+            <td>
+                <strong>{{item}}</strong>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+
+{{#link-to 'shoppinglist.edit' model}}Change{{/link-to}}
+
+{{outlet}}

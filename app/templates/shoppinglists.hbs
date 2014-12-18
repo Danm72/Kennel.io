@@ -1,0 +1,9 @@
+<h1>ShoppingLists</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'shoppinglist' this}}{{this.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

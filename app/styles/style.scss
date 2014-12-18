@@ -1,0 +1,23 @@
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+
+/* Put your CSS here */
+html, body {
+    margin: 30px 0;
+}
+
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-kennel {
+    @extend .col-md-3;
+    padding-left: 0;
+}
+
+.sidebar--well {
+    @extend .well;
+    padding: 2px;
+}

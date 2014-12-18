@@ -1,0 +1,1 @@
+Kennel.ApplicationAdapter = DS.FixtureAdapter;
