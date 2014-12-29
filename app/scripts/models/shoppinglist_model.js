@@ -33,7 +33,7 @@ Kennel.Shoppinglist.FIXTURES = [
 
         price: '€20'
 
-    },
+    }/*,
 
     {
         id: 1,
@@ -48,6 +48,6 @@ Kennel.Shoppinglist.FIXTURES = [
 
         price: '€10,000'
 
-    }
+    }*/
 
 ];

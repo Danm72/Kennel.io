@@ -1,31 +1,50 @@
-<h1>ShoppingList</h1>
+<section id="shoppingapp">
+    <header id="header">
+        <h1>{{model.name}}</h1>
+        <input type="text" id="new-grocery" placeholder="What needs to be bought?" />
+    </header>
 
-<table>
-    <tr class="col-md-9">
-        <td class="col-md-3">
-            <strong>Name:</strong>
-        </td>
-        <td class="col-md-3">
-            {{model.name}}
-        </td>
-        <td class="col-md-3">
-            <strong>Price:</strong>
-        </td>
-        <td class="col-md-3">
-            {{model.price}}
-        </td>
-    </tr>
-    <td class="col-md-9">
-        <strong>List:</strong>
-    </td>
-    {{#each item in model.items}}
-        <tr class="col-md-3">
-            <td>
-                <strong>{{item}}</strong>
-            </td>
-        </tr>
-    {{/each}}
-</table>
+    <section id="main">
+        <ul id="grocery-list">
+            {{#each item in model.items}}
+                <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
+                    {{#if isEditing}}
+                        {{edit-grocery class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+                    {{else}}
+                        {{input type="checkbox" checked=isCompleted class="toggle"}}
+                        <label {{action "editGrocery" on="doubleClick"}}>{{item}}</label><button {{action "removeGrocery"}} class="destroy"></button>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+        <input type="checkbox" id="toggle-all">
+    </section>
+
+    <footer id="footer">
+        <span id="grocery-count">
+          <strong>2</strong> groceries left
+        </span>
+        <ul id="filters">
+            <li>
+                <a href="all" class="selected">All</a>
+            </li>
+            <li>
+                <a href="active">Active</a>
+            </li>
+            <li>
+                <a href="completed">Completed</a>
+            </li>
+        </ul>
+
+        <button id="clear-completed">
+            Clear completed (1)
+        </button>
+    </footer>
+</section>
+
+<footer id="info">
+    <p>Double-click to edit a grocery</p>
+</footer>
 
 {{#link-to 'shoppinglist.edit' model}}Change{{/link-to}}
 

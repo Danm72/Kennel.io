@@ -12,19 +12,15 @@
                 <a class="col-md-2 navbar-brand" href="#">Kennel.io</a>
             </div>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav pull-right">
+                <li>{{#link-to 'shoppinglists'}}Shopping{{/link-to}}</li>
+                <li>{{#link-to 'medias'}}Media{{/link-to}}</li>
+            </ul>
         </div>
     </nav>
     <div class="container" id="main">
             <div>
-                <div class="sidebar-kennel">
-                    <div class="sidebar--well sidebar-nav">
-                        <ul class="list-group">
-                            <li class="list-group-item">{{#link-to 'shoppinglists'}}Shopping{{/link-to}}</li>
-                            <li class="list-group-item">{{#link-to 'medias'}}Media{{/link-to}}</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="col-md-9">
                     {{outlet}}
                 </div>
