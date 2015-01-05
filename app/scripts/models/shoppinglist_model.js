@@ -28,7 +28,9 @@ Kennel.Shoppinglist.FIXTURES = [
         items: [
             'milk',
             'water',
-            'extra small jonnies(for cian)'
+            'extra small jonnies(for cian)',
+            'moist towelettes',
+            'moist towelettes'
         ],
 
         price: '€20'
