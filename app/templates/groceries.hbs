@@ -1,0 +1,9 @@
+<h1>Groceries</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'grocery' this}}{{this.id}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

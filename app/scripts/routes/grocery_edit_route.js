@@ -1,6 +1,6 @@
-Kennel.ShoppinglistEditRoute = Ember.Route.extend({
+Kennel.GroceryEditRoute = Ember.Route.extend({
   model: function(params) {
-    return this.get('store').find('shoppinglist', this.modelFor('shoppinglist').id);
+    return this.get('store').find('grocery', this.modelFor('grocery').id);
   },
   setupController: function(controller, model){
     controller.set('model', model);
